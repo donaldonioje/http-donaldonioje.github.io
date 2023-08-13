@@ -1,0 +1,476 @@
+:root{
+    --color1:#03045E;
+    --color2:#023E8A;
+    --color3:#0077B6;
+    --color4:#0096C7;
+    --color5:#00B4D8;
+    --color6:#48CAE4;
+    --color7:#90E0EF;
+    --color8:#CAF0F8;
+    --color9:#ADE8F4 ;
+}
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "segoe UI";
+    user-select: none;
+}
+
+body{
+    background: var(--color8);
+}
+
+li {
+    list-style: none;
+}
+h3{
+    color: var(--color6);
+}
+
+nav a{
+    color: var(--color6);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+nav  a:hover{
+    color: var(--color8);
+}
+
+nav {
+    background:var(--color1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: calc(0.7rem + 0.8vw);
+    position: fixed;
+    width: 95%;
+    z-index: 999;
+    top: 0;
+    margin: 0px 0 30px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    font-weight:bold ;
+}
+
+#icons {
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width:650px) {
+    #icons{
+        display: block;
+    }
+
+    #icons::before{
+    content: "\2630";
+    color: var(--color6);
+    font-size: 2rem;
+    }
+
+    .active #icons::before{
+        content: "\2715";
+    }
+
+    nav ul{
+        position: fixed;
+        left: -100%;
+        top: 5%;
+        flex-direction: column;
+        width: 100%;
+        background: var(--color1);
+        text-align: center;
+        transition: 0.25s;
+    }
+
+    nav li {
+        padding: 3px 0px;
+        
+    }
+
+    nav li:hover {
+        background: rgb(34, 61, 71);
+    }
+    .active ul {
+        left: 0;
+    }
+
+    }
+
+    .begin {
+        width: 60%;
+        border: 3px solid var(--color3);
+        margin:100px 15% 0 18.5%;
+        background: var(--color3);
+        color: aliceblue;
+        text-transform: uppercase;
+        font-size: calc(0.5rem + 5vh);
+        padding: 15px 5px;
+        display: grid;
+        grid-template-columns:35% 65% ;
+        font-weight: bolder;
+        position:relative;
+        border-radius: 10px;
+    }
+     #donald {
+        display: block;
+        width: 80%;
+        height: 80%;
+        position: relative;
+        margin: 15% auto;
+    }
+    .begin1{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+    .bonjour {
+        margin:10px auto 25px;
+    }
+
+    .me{
+        width: 60%;
+        border: 3px solid var(--color3);
+        margin:40px 15% 40px 18.5%;
+        background: var(--color3);
+        color: aliceblue;
+        text-transform: uppercase;
+        font-size: calc(0.5rem + 5vh);
+        padding: 15px 5px;  
+        font-weight: bolder;
+        text-align: center;
+        border-radius: 10px;
+    }
+
+    .me span {
+        color: var(--color1);
+    }
+
+    .photo {
+        background: var(--color8);
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .photo img {
+        order: 0;
+    }
+    #quisuisje{
+        margin: 30px 11% 30px 13.5%;
+        padding: 20px;
+        background: var(--color7);
+        border: 1px solid var(--color7);
+        border-radius: 10px;
+    }
+
+    .quisuisje{
+        margin: 20px auto;
+        font-size: calc(0.9rem + 1vw);
+        font-weight: 700px;
+    }
+
+    #quisuisje h1 {
+        background: var(--color8);
+        color: var(--color1);
+        padding: 7px;
+        text-align: center;
+        font-size: calc(0.8rem + 5vw);
+        border: 1px solid var(--color7);
+        border-radius: 40px;
+    }
+
+    .informations {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        margin: 0 30px 30px ;
+    }
+    .informations h1 {
+        font-size: calc(0.8rem + 5vw);
+        margin: 0 0 30px;
+        text-transform: uppercase;
+    }
+
+    .infos{
+        border: 1px solid transparent;
+    }
+
+    .infos div {
+        font-size: calc(0.8rem + 3vw);
+        margin:0 15% 0;
+        padding: 15px;
+        background: var(--color5);
+        color: var(--color8);
+        font-weight: bold;
+        border-bottom: 1px solid var(--color3);
+        border-radius:10px ;
+    }
+
+    #projets{
+        margin:15px 30px 15px  ;
+    }
+    .projetscontainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:  "a b" "c d";
+        
+    }
+    .important{
+        font-size: calc(0.8rem + 5vw);
+        text-transform: uppercase;
+        font-weight: bolder;
+        text-align: center;
+        margin: 5px 0px 25px;
+    }
+
+    .experience{
+        grid-area: a;
+    }
+    .clients{
+        grid-area: b;
+    }
+  
+    .projets{
+        grid-area: c;
+    }
+    
+    .prix{
+        grid-area: d;
+    }
+    .experience , .clients , .projets , .prix {
+        font-weight: bolder;
+        text-align: center;
+        font-size: calc(0.8rem + 3vw);
+        color: var(--color8);
+        background: var(--color3);
+        margin: 20px;
+        padding: 20px;
+        border-radius: 10px;
+
+    }
+
+    #projets span{
+        font-weight: normal;
+        font-size: calc(1rem +  4vw);
+    }
+
+   .experience , .clients{
+    margin-top:0
+   }
+   #services{
+    margin: 30px 11% 30px 13.5%;
+   }
+   .services {
+    font-size: calc(0.8rem + 5vw);
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-align: center;
+    margin: 0 0 20px;
+   }
+   .sitesweb-container , .apk-container , .intelligence-container , .chatbot-container {
+    
+    padding: 3%;
+    background: var(--color7);
+    border: 1px solid var(--color7);
+    border-radius: 10px;
+   }
+
+   .sitesweb-container h1 , .apk-container h1 , .intelligence-container h1 ,
+  .chatbot-container h1 {
+    font-weight: bolder;
+    text-align: center;
+    font-size: calc(0.8rem + 3vw);
+    background: var(--color8);
+    color: var(--color1);
+    border: 1px solid var(--color7);
+    border-radius: 30px;
+    padding: 7px;
+     
+   }
+
+   .sitesweb , .apk , .intelligence , .chatbot{
+    margin: 20px auto;
+        font-size: calc(0.9rem + 1vw);
+        font-weight: 700px;
+   }
+
+   #contacts h1{
+    font-size: calc(0.8rem + 5vw);
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-align: center;
+    margin: 0 0 20px;
+   }
+    .sociaux .p1 {
+    display: flex;
+    justify-content: center;
+   }
+   .sociaux .p2 {
+    width: 60%;
+    border: 3px solid var(--color2);
+    margin:12px 15% 25px 19%;
+    background: var(--color2);
+    color:var(--color8) ;
+    font-size: calc(0.5rem + 1.2vw);
+    padding: 15px 5px;  
+    font-weight: bolder;
+    text-align: center;
+    border-radius: 10px;
+   }
+
+   .mail{
+    display: flex;
+    justify-content: center;
+    margin: 0 6%;
+    padding: 10px;
+    background: var(--color3);
+    border-radius: 150px;
+
+   }
+
+   .mail a ,.mail :visited {
+    text-decoration: none;
+    color: var(--color8);
+   }
+
+   .sociaux h4 {
+    font-size: calc(0.8rem + 2vw);
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-align: center;
+    margin: 20px 10px 20px;
+   }
+
+   .sociaux-icons {
+    display: flex;
+    justify-content: center;
+   }
+   .sociaux-icons a {
+    margin: 0 20px  0;
+   }
+
+   .rien {
+    padding: 25px 0 3px;
+    background: var(--color8);
+   }
+
+   .copywrite{
+    padding: 25px 0 3px;
+    text-align: center;
+    background: var(--color1);
+    color: var(--color4);
+   }
+
+   @media screen and (max-width:1180px) {
+        .photo {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+
+        .photo1 , .photo2 {
+            width: 70%;
+            height: 300px;
+          }
+       
+   }
+
+   @media screen and (max-width:725px) {
+    .begin , .me{
+        font-size: calc(0.5rem + 3vw);
+    } 
+   }
+
+   @media screen and (max-width:595px){
+      .photo1 , .photo2 {
+        width: 80%;
+        height: 300px;
+      }
+   }
+
+   @media screen and (max-width:595px){
+    .projetscontainer{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr ;
+        grid-template-areas: "a" "b" "c" "d";
+        font-size: calc(1rem + 1vw);
+       
+    }
+    .experience{
+        grid-area: a;
+        text-align: center;
+    }
+
+    .clients{
+        grid-area: b;
+    }
+
+    .projets{
+        grid-area: c;
+    }
+
+    .prix{
+        grid-area: d;
+        padding-left: 0;
+    } 
+    }
+    
+    @media screen and (max-width:395px){
+        .begin , .me {
+            font-size: calc(0.5rem + 2vw);
+        }
+        .begin{
+            grid-template-columns: 45% 55%;
+        }
+
+        .bonjour{
+            margin: 10px auto  ;
+        }
+        .sociaux-icons a {
+             margin: 0 10px;
+        }
+        .sociaux-icons img{
+            height: 30px;
+            width: 30px;
+        }
+        .quisuisje{
+            font-size: 1rem;
+        }
+
+        .sitesweb , .apk , .intelligence , .chatbot{
+            font-size: 1rem;
+        }
+
+        .photo1 , .photo2 {
+            height: 150px;
+        }
+    }
+
+    @media screen and (max-width:270px){
+        .experience , .clients , .projets , .prix {
+            margin: auto 2%;
+        }
+
+        .prix{
+            margin: 0px 2%;
+        }
+
+        #quisuisje{
+            margin: 30px 10px;
+        }
+        #services {
+            margin:20px 10px ;
+        }
+    }
